@@ -8,8 +8,7 @@ env/
 .env
 backend/.env
 backend/*.db
-backend/ml_models/*.keras
-backend/ml_models/*.h5
+
 
 # --- Node / frontend ---
 node_modules/
