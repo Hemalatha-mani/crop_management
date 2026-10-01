@@ -9,7 +9,6 @@ env/
 backend/.env
 backend/*.db
 
-
 # --- Node / frontend ---
 node_modules/
 frontend/dist/
