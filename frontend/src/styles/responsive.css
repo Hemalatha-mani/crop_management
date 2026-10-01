@@ -1,0 +1,67 @@
+/* Large tablets / small laptops */
+@media (max-width: 1100px) {
+  .page { padding: 28px 24px 48px; }
+  .insights-grid { grid-template-columns: 1fr; }
+  .home-hero__text { padding: 36px 0 36px 32px; }
+  .home-hero h1 { font-size: 2rem; }
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+  .ai-detect-grid { grid-template-columns: 1fr; }
+  .remedies-layout { grid-template-columns: 1fr; }
+  .remedies-layout__list { position: static; display: flex; flex-wrap: wrap; gap: 8px; }
+  .remedies-layout__list .chip--block { width: auto; margin: 0; }
+  .home-hero { flex-direction: column; text-align: left; }
+  .home-hero__text { padding: 34px 28px 0; }
+  .home-hero__art { padding: 0 24px 28px; }
+  .home-hero__art svg { width: 210px; }
+  .auth-page__image { display: none; }
+}
+
+/* Mobile: sidebar becomes a slide-in drawer */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.28s var(--ease);
+    z-index: 100;
+    box-shadow: var(--shadow-lg);
+  }
+  .sidebar--open { transform: translateX(0); }
+  .sidebar__overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 24, 16, 0.55);
+    z-index: 99;
+  }
+  .app-shell__topbar { display: flex; }
+  .page { padding: 20px 16px 40px; }
+  h1 { font-size: 1.6rem; }
+  .page-header { flex-direction: column; align-items: flex-start; }
+  .home-hero h1 { font-size: 1.75rem; }
+  .chatbot-container { height: calc(100vh - 230px); }
+  .chat-bubble { max-width: 92%; }
+  .diseases-grid, .prevention-grid, .crop-management-grid { grid-template-columns: 1fr; }
+  .input--search { max-width: none; }
+  .diseases-page__controls > .input { flex: 1 1 100%; }
+  .timeline__row { gap: 12px; }
+  .timeline__marker { width: 38px; height: 38px; }
+  .timeline__row:not(:last-child)::before { left: 18px; top: 40px; }
+  .auth-page__card { padding: 26px 22px; }
+}
+
+@media (max-width: 480px) {
+  .home-hero__text { padding: 28px 20px 0; }
+  .home-hero h1 { font-size: 1.5rem; }
+  .home-hero__cta .btn { width: 100%; }
+  .prediction-result__actions .btn { flex: 1 1 100%; }
+  .stat-card { padding: 16px; }
+  .stat-card__icon { width: 46px; height: 46px; font-size: 1.3rem; }
+  .table th, .table td { padding: 12px 14px; }
+}

@@ -1,0 +1,4 @@
+# Full install (used by Render). Includes TensorFlow for real predictions.
+# TensorFlow 2.17 supports Python 3.9 - 3.12 only (NOT 3.13).
+-r requirements-base.txt
+tensorflow-cpu==2.17.0
